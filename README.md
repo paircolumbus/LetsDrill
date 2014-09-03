@@ -26,7 +26,7 @@ get_letter_grade(74) => returns "C"
 Create a function `shortest_string` that accepts an array of strings and returns the shortest.
 
 ```
-shortest_string([apple, car, yo]) => returns "yo"
+shortest_string(['apple', 'car', 'yo']) => returns "yo"
 
-shortest_string([fargo, columbus, indianapolis]) => returns "fargo"
+shortest_string(['fargo', 'columbus', 'indianapolis']) => returns "fargo"
 ```
