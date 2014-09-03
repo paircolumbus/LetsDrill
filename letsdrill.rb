@@ -10,11 +10,10 @@ end
 
 def shortest_string(array)
 
-  return array.sort[0] 
+   return array.sort_by{|x| x.length}[0]
 
 end
  
-
 
 ### Don't touch anything below this line ###
  
@@ -26,3 +25,4 @@ p "Shortest String: You should have 3 trues"
 p shortest_string(["touch","this", "car"]) == "car"
 p shortest_string([]) == nil 
 p shortest_string(["can", "a", "solve", "find", "solution"]) == "a" 
+p shortest_string(["Apple", "ant", "Antelope"]) == "ant"
