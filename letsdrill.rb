@@ -1,12 +1,16 @@
 def get_letter_grade(integer)
  
-  #Put your code here!
+  return "A" if integer > 90
+  return "B" if integer > 80
+  return "C" if integer > 70
+  return "D" if integer > 60
+  return "F"
 
 end
 
 def shortest_string(array)
 
-  #Put your code here!
+  return array.sort[0] 
 
 end
  
