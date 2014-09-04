@@ -28,5 +28,5 @@ Create a function `shortest_string` that accepts an array of strings and returns
 ```
 shortest_string(['apple', 'car', 'yo']) => returns "yo"
 
-shortest_string(['fargo', 'columbus', 'indianapolis']) => returns "fargo"
+shortest_string(['fargo', 'columbus', 'Indianapolis']) => returns "fargo"
 ```
