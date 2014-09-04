@@ -21,4 +21,4 @@ p
 p "Shortest String: You should have 3 trues"
 p shortest_string(["touch","this", "car"]) == "car"
 p shortest_string([]) == nil 
-p shortest_string(["can", "a", "solve", "find", "solution"]) == "a" 
+p shortest_string(["can", "a", "solve", "Find", "solution"]) == "a" 
