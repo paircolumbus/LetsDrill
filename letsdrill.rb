@@ -14,7 +14,7 @@ def get_letter_grade(grade)
 end
 
 def shortest_string(array)
-	$short_string_count = 100
+	$short_string_count = Float::INFINITY
 	$short_string = nil
 	
 	array.each do |word|
