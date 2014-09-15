@@ -1,12 +1,17 @@
 def get_letter_grade(integer)
  
   #Put your code here!
-
+   return "A" if integer.between?(90, 100)
+   return "B" if integer.between?(80, 89)
+   return "C" if integer.between?(60, 79)
+   return "D" if integer.between?(50, 69)
+   return "F"
 end
 
 def shortest_string(array)
 
   #Put your code here!
+  array.sort_by{|x| x.length}.first
 
 end
  
