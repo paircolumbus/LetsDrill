@@ -1,13 +1,12 @@
-def get_letter_grade(integer)
- 
-  #Put your code here!
+# A String of 10 letters. You can use the numerical index of a grade (from 0-9, mapping to 1-100) to look up the appropriate letter grade.
+LETTERS = 'FFFFFFDCBA'
 
+def get_letter_grade(integer)
+  LETTERS[(integer / 10)]
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  array.min_by { |item| item.size }
 end
  
 
