@@ -1,12 +1,12 @@
 # A String of 10 letters. You can use the numerical index of a grade (from 0-9, mapping to 1-100) to look up the appropriate letter grade.
-LETTERS = 'FFFFFFDCBA'
+LETTERS = "#{ 'F' * 6 }DCBA"
 
-def get_letter_grade(integer)
-  LETTERS[(integer / 10)]
+def get_letter_grade(grade)
+  LETTERS[grade / 10]
 end
 
-def shortest_string(array)
-  array.min_by { |item| item.size }
+def shortest_string(strings)
+  strings.min_by &:size
 end
  
 
