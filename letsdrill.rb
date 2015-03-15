@@ -1,6 +1,8 @@
 def get_letter_grade(integer)
  
   #Put your code here!
+  # This is where you put your solution, but not as a comment :)
+  return "A"
 
 end
 
