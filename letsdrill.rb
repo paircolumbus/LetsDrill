@@ -10,7 +10,7 @@ def get_letter_grade(integer)
   end
 end
 
-def shortest_string(*array)
+def shortest_string(array)
 
   #Put your code here!
   array.min {|x,y| x.size <=> y.size}
