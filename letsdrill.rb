@@ -1,12 +1,36 @@
 def get_letter_grade(integer)
  
-  #Put your code here!
-
+	case integer
+	when 90..100
+		"A"
+	when 80..89
+		"B"
+	when 70..79
+		"C"
+	when 60..69
+		"D"
+	else
+		"F"
+	end
 end
 
 def shortest_string(array)
+#	return nil if array.empty?
 
-  #Put your code here!
+#	return array.min_by { |str| str.length }
+
+	array.min_by(&:length)
+
+#	minLength = array[0].length()
+#	shortestWord = array[0]
+#	array.each do |str|
+#		if(str.length() < minLength) 
+#			minLength = str.length()
+#			shortestWord = str
+#		end
+#	end
+
+#	return shortestWord
 
 end
  
