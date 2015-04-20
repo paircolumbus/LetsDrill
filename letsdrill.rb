@@ -1,19 +1,20 @@
 def get_letter_grade(score)
   case score
   when 90..100
-    return "A"
+    "A"
   when 80..90
-    return "B"
+    "B"
   when 70..80
-    return "C"
+    "C"
   when 60..70
-    return "D"
+    "D"
+  else
+    "F"
   end
-  return "F"
 end
 
 def shortest_string(strings)
-  strings.reduce { |m, s| s.length < m.length ? s : m }
+  strings.min_by { |s| s.length }
 end
 
 ### Don't touch anything below this line ###
