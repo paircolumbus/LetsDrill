@@ -1,13 +1,30 @@
+# def get_letter_grade_switch(score)
+#
+#   #score = score.to_i
+#   if score >= 90
+#     "A"
+#   elsif score >= 80
+#     "B"
+#   elsif score >= 70
+#     "C"
+#   elsif score >= 60
+#     "D"
+#   else
+#     "F"
+#   end
+#
+# end
+
 def get_letter_grade(score)
 
-  score = score.to_i
-  if score >= 90
+  case score
+  when 90..100
     "A"
-  elsif score >= 80
+  when 80..89
     "B"
-  elsif score >= 70
+  when 70..79
     "C"
-  elsif score >= 60
+  when 60..69
     "D"
   else
     "F"
@@ -15,15 +32,13 @@ def get_letter_grade(score)
 
 end
 
-
-
-
 def shortest_string(array)
+  #["i","touch","this", "car"]
+ #sort the array by longest to shortest
 
-array.min
-
-array.min { |a,b| a.length <=> b.length }
-
+ array.sort! { |x,y| x.length <=> y.length }
+ p array
+ array.first
 end
 
 
@@ -33,6 +48,8 @@ end
 p "Fetch Letter Grade: You should have 2 trues"
 p get_letter_grade(89) == "B"
 p get_letter_grade(73) == "C"
+p get_letter_grade(90) == "B"
+p get_letter_grade(90) == "A"
 p
 p "Shortest String: You should have 3 trues"
 p shortest_string(["touch","this", "car"]) == "car"
