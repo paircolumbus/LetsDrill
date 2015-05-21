@@ -1,14 +1,14 @@
 def get_letter_grade(integer)
-  if (integer >= 90)
-    return "A"
-  elsif (integer >= 80)
-    return "B"
-  elsif (integer >= 70)
-    return "C"
-  elsif (integer >= 60)
-    return "D"
+  if integer >= 90
+    "A"
+  elsif integer >= 80
+    "B"
+  elsif integer >= 70
+    "C"
+  elsif integer >= 60
+    "D"
   else
-    return "F"
+    "F"
   end
 end
 
