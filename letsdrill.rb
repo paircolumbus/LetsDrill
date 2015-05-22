@@ -1,6 +1,7 @@
 def get_letter_grade(integer)
 	case integer 
 	when 0..59
+		'F'
 	when 60..69
 		'D'
 	when 70..79
