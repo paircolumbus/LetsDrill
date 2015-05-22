@@ -1,20 +1,19 @@
 def get_letter_grade(integer)
-	case 
-	when integer <= 59 
-		'F'
-	when integer >= 60 && integer <= 69
+	case integer 
+	when 0..59
+	when 60..69
 		'D'
-	when integer >= 70 && integer <= 79
+	when 70..79
 		'C'
-	when integer >= 80 && integer <= 89
+	when 80..89
 		'B'
-	else 
+	else
 		'A'
 	end 
 end
 
 def shortest_string(array)
-	array.sort_by {|string| string.length}.first
+	array.min_by {|string| string.length}
 end
  
 
