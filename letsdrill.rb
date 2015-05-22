@@ -18,7 +18,6 @@ def shortest_string(array)
 end
  
 
-
 ### Don't touch anything below this line ###
  
 p "Fetch Letter Grade: You should have 2 trues"
