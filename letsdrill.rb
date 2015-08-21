@@ -1,5 +1,3 @@
-
-
 def get_letter_grade(integer)
  
 	grades = { "A" => 90, "B" => 80, "C" => 70, "D" => 60 }
