@@ -1,12 +1,18 @@
 def get_letter_grade(integer)
  
-  #Put your code here!
+	grades = { "A" => 90, "B" => 80, "C" => 70, "D" => 60 }
+
+	grades.each do |key, value|
+		if integer >= value
+	  		return key
+	  	end
+	end
 
 end
 
 def shortest_string(array)
 
-  #Put your code here!
+	array.sort{ |x,y| x.length<=>y.length}.first
 
 end
  
