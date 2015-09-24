@@ -1,12 +1,12 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
-
+  grade_levels = [ [ 90, "A" ], [80, "B"], [70, "C"], [60, "D"] ]
+  (grade_levels.select { |g| integer >= g[0] })[0][1]
 end
 
 def shortest_string(array)
 
-  #Put your code here!
+  return nil if array.length == 0
+  (array.sort_by { |a| a.length })[0]
 
 end
  
