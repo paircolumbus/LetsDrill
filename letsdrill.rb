@@ -4,10 +4,7 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-
-  return nil if array.length == 0
-  (array.sort_by { |a| a.length })[0]
-
+  array.sort_by(&:length).first
 end
  
 
