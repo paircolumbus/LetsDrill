@@ -16,15 +16,7 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-
-  shortest = nil
-  array.each { |word|
-    if shortest == nil || word.length < shortest.length
-      shortest = word
-    end
-  }
-  return shortest
-
+  array.min { |a,b| a.length <=> b.length }
 end
  
 
