@@ -13,9 +13,7 @@ end
 def shortest_string(array)
 
   #Put your code here!
-  shortest = array
-  shortest = shortest.sort_by(&:length)
-  shortest[0]
+  array.sort_by(&:length).first
 end
  
 
