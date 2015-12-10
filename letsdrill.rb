@@ -10,11 +10,7 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-  return nil if array.length == 0
-  
-  array.inject do |memo, string|
-    memo.length < string.length ? memo : string
-  end
+  array.sort_by { |string| string.length }.first
 end
  
 
