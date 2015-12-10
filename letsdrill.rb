@@ -13,7 +13,7 @@ def shortest_string(array)
   return nil if array.length == 0
   
   array.inject do |memo, string|
-   memo.length < string.length ? memo : string
+    memo.length < string.length ? memo : string
   end
 end
  
