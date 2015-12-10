@@ -1,11 +1,11 @@
 
 def get_letter_grade(integer)
   case integer
-  when 90..100 then return 'A'
-  when 80..89  then return 'B'
-  when 70..79  then return 'C'
-  when 60..69  then return 'D'
-  else return 'F' 
+  when 90..100 then 'A'
+  when 80..89  then 'B'
+  when 70..79  then 'C'
+  when 60..69  then 'D'
+  else 'F' 
   end
 end
 
