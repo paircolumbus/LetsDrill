@@ -1,13 +1,20 @@
-def get_letter_grade(integer)
- 
-  #Put your code here!
 
+def get_letter_grade(integer)
+  case integer
+  when 90..100 then return 'A'
+  when 80..89  then return 'B'
+  when 70..79  then return 'C'
+  when 60..69  then return 'D'
+  else return 'F' 
+  end
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  return nil if array.length == 0
+  
+  array.inject do |memo, string|
+   memo.length < string.length ? memo : string
+  end
 end
  
 
