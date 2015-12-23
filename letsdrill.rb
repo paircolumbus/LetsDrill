@@ -2,13 +2,13 @@ def get_letter_grade(integer)
   #Put your code here!
   if integer >= 90
     puts "A"
-  elsif (integer >= 80)
+  elsif integer >= 80
     puts "B"
-  elsif (integer >= 70)
+  elsif integer >= 70
     puts "C"
-  elsif (integer >= 60)
+  elsif integer >= 60
     puts "D"
-  elsif (integer >= 0)
+  elsif integer >= 0
     puts "F"
   else
     puts "that is not a valid percentage number"
@@ -16,9 +16,8 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-
   #Put your code here!
-
+  array.map {|a,b| a.length <=> b.length}
 end
 
 
