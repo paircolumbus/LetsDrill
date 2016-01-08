@@ -1,13 +1,31 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
 
+  #Put your code here!
+  case integer
+  when (60..69)
+  	grade = "D"
+  when (70..79)
+  	grade = "C"
+  when (80..89)
+  	grade = "B"
+  when (90 ..100)
+  	grade = "A"
+  else 
+  	grade = "F"
+  end
+  grade
 end
 
 def shortest_string(array)
+	#I'm making the assumption that the array is an array of strings.
+	shortest = array[0]
 
-  #Put your code here!
-
+	array.each do |s| 
+		if s.length < shortest.length
+			shortest = s
+		end
+	end
+	shortest
 end
  
 
