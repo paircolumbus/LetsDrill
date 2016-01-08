@@ -1,27 +1,23 @@
 def get_letter_grade(integer)
  
   if integer >= 90
-  	return "A"
+    return "A"
   elsif integer >= 80
-  	return "B"
+    return "B"
   elsif integer >= 70
-  	return "C"
+    return "C"
   elsif integer >= 60
-  	return "D"
+    return "D"
   else
-  	return "F"
+    return "F"
   end
 
 end
 
 def shortest_string(array)
 
-  if array.empty?
-  	return nil
-  end
-
-  return array.sort_by {|x| x.length}[0]
-
+  array.min_by {|x| x.length}
+  
 end
  
 
