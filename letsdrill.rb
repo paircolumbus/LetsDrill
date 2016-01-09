@@ -15,19 +15,7 @@ end
 def shortest_string(array)
 
   #Put your code here!
-
-	if (array.empty?) then return nil
-	end
-
-	shortest_string = array[0]
-
-	array.each do |string|
-		if (string.length < shortest_string.length)
-			then shortest_string = string
-		end
-	end
-
-	return shortest_string
+	return array.min_by { |string| string.length }
 
 end
 
