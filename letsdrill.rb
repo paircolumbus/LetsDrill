@@ -3,15 +3,15 @@ def get_letter_grade(integer)
 #using ranges as conditions
   case integer
   when 90..100
-    then "A"
+    "A"
   when 80..90
-    then "B"
+     "B"
   when 70..80
-    then "C"
+     "C"
   when 60..70
-    then "D"
+     "D"
   when 0..60
-    then "F"
+     "F"
   else "Invalid"
   end
 end
