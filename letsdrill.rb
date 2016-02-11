@@ -1,24 +1,20 @@
 def get_letter_grade(integer)
- grade = ""
-  grade_ranges = {
-  	"F" => 60,
-  	"D" => 70,
-  	"C" => 80,
-  	"B" => 90
-  }
-
-  grade_ranges.each do |letter, upper_bound|
-  	if (integer < upper_bound)
-  		grade = letter
-  		return grade
-  	else
-  		grade = "A"
-  	end
-  end
+ case 
+ when integer < 60
+  grade = "F"
+when integer < 70
+  grade = "D"
+when integer < 80
+  grade = "C"
+when integer < 90
+  grade = "B"
+else
+   grade = "A"
+ end
 end
 
 def shortest_string(array)
-	shortest = array.min { |a, b| a.length <=> b.length }
+  array.min_by { |x| x.length }
 end
  
 
