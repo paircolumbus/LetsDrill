@@ -1,31 +1,19 @@
 def get_letter_grade(integer)
+  letter = 'F'
   if integer >= 90
-    return 'A'
+    letter = 'A'
   elsif integer >= 80
-    return 'B'
+    letter = 'B'
   elsif integer >= 70
-    return 'C'
+    letter = 'C'
   elsif integer >= 60
-    return 'D'
+    letter = 'D'
   end
-  return 'F' # if it gets this far it has to be an F
-
+  letter
 end
 
 def shortest_string(array)
-  if array.empty?
-    return nil
-  end
-  #sets a value for the length of the smallest string to be the first
-  smallest_length = array[0].length
-  smallest = array[0];
-  for i in array
-    if i.length < smallest_length
-      smallest_length = i.length;
-      smallest = i;
-    end
-  end
-  return smallest;
+  array.min_by{ |e| e.length}
 end
 
 
