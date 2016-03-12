@@ -1,18 +1,18 @@
 def get_letter_grade(integer)
-  if integer >= 90 then 'A'
-  elsif integer >= 80 then 'B'
-  elsif integer >= 70 then 'C'
-  elsif integer >= 60 then 'D'
-  elsif integer >= 50 then 'F'
-  else 'Invalid grade'
-  end
+  grade = case integer
+          when (90..100) then 'A'
+          when (80..89) then 'B'
+          when (70..79) then 'C'
+          when (60..69) then 'D'
+          when (0..59) then 'F'
+          else 'Invalid grade'
+          end
+  grade
 end
 
 def shortest_string(array)
-  array.sort { |x,y| x.length <=> y.length }.shift
+  array.sort { |x, y| x.length <=> y.length }.shift
 end
-
-
 
 ### Don't touch anything below this line ###
 
