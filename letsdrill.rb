@@ -1,29 +1,42 @@
 def get_letter_grade(integer)
 
   #Put your code here!
-  if integer>=90
-    "A"
-  elsif integer>=80
-    "B"
-  elsif integer>=70
-    "C"
-  elsif integer>=60
-    "D"
+  if integer.is_a? Integer
+    if integer>=90
+      "A"
+    elsif integer>=80
+      "B"
+    elsif integer>=70
+      "C"
+    elsif integer>=60
+      "D"
+    else
+      "F"
+    end
   else
-    "F"
+    puts "Expected an Integer. You supplied #{integer}"
   end
-
 end
 
 def shortest_string(array)
 
   #Put your code here!
-  shortest = array[0]
-  array.each {|s| if s.length < shortest shortest = s}
-
+  if array.is_a? Array
+    shortest = array[0]
+    array.each do |s|
+      if s.is_a? String
+        if s.length < shortest.length
+          shortest = s
+        end
+      else
+        puts "Expected an array of Strings. You supplied #{array}"
+      end
+    end
+  else
+    puts "Expected an array. You supplied #{array}"
+  end
+  shortest
 end
-
-
 
 ### Don't touch anything below this line ###
 
