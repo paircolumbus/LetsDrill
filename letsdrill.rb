@@ -19,23 +19,10 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-
   #Put your code here!
-  if array.is_a? Array
-    shortest = array[0]
-    array.each do |s|
-      if s.is_a? String
-        if s.length < shortest.length
-          shortest = s
-        end
-      else
-        puts "Expected an array of Strings. You supplied #{array}"
-      end
-    end
-  else
-    puts "Expected an array. You supplied #{array}"
-  end
-  shortest
+  array.each {|s| s.downcase}
+  array.sort! {|l,r| l.length <=> r.length}
+  array[0]
 end
 
 ### Don't touch anything below this line ###
