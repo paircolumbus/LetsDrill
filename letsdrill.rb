@@ -20,7 +20,6 @@ end
 
 def shortest_string(array)
   #Put your code here!
-  array.each {|s| s.downcase}
   array.sort! {|l,r| l.length <=> r.length}
   array[0]
 end
