@@ -20,8 +20,7 @@ end
 
 def shortest_string(array)
   #Put your code here!
-  array.sort! {|l,r| l.length <=> r.length}
-  array[0]
+  array.min_by(&:length)
 end
 
 ### Don't touch anything below this line ###
