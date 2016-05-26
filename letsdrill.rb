@@ -16,14 +16,7 @@ end
 
 def shortest_string(array)
 
-  shortest = array[0]
-  array.each do |s|
-    if s.length < shortest.length
-      shortest = s
-    end
-  end
-
-  return shortest
+  array.sort{|s| s.length}.last
 
 end
 
