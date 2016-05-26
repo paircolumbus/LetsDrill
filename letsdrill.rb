@@ -13,13 +13,14 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-	shortest = array.first
-	array.each{|string|
-		if string.length < shortest.length
-			shortest = string
-		end
-	}
-	shortest
+	# shortest = array.first
+	# array.each{|string|
+	# 	if string.length < shortest.length
+	# 		shortest = string
+	# 	end
+	# }
+	# shortest
+	shortest = array.inject {|shortest,word| word.length < shortest.length ? word : shortest}
 end
  
 
