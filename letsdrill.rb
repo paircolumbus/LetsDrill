@@ -9,21 +9,17 @@ def get_letter_grade(integer)
     else "Invalid Score"
   end
 
-  return grade
 end
 
 def shortest_string(array)
-
-  if array.length == 0
-    return nil
-  end
+  return nil if array.empty?
 
   index = array[0]
-  array.each { |x|
+  array.each do |x|
     if x.length < index.length
       index = x
     end
-  }
+  end
   return index
 end
 
