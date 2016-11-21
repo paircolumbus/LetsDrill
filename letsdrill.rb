@@ -12,9 +12,9 @@ def get_letter_grade(grade)
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+    return array.reduce do |shortest, current|
+        current.length > shortest.length ? shortest : current
+    end
 end
  
 
