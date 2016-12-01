@@ -1,29 +1,36 @@
+class InvalidScore < ArgumentError
+  def initialize(msg = "Invalid Score. Please enter an integer.")
+    super
+  end
+end
+
+
 def get_letter_grade(integer)
+
+  if integer != "0" and integer.to_i == 0
+    raise InvalidScore
+  end
 
   percentageGrade = integer.to_i
 
-  puts case percentageGrade
+  case percentageGrade
   when 90..100
-    return "A"
+    "A"
   when 80..89
-    return "B"
+    "B"
   when 70..79
-    return "C"
+    "C"
   when 60..69
-    return "D"
+    "D"
   when 0..59
-    return "F"
-  else
-    return "Invalid percentage"
+    "F"
   end
 end
 
 def shortest_string(array)
 
-  shortString = array[0]
-  array.each {|testString| testString.length < shortString.length ? shortString = testString : shortString}
+  shortString = array.min_by {|a| a.length }
 
-  return shortString
 end
 
 
