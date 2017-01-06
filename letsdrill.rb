@@ -1,13 +1,21 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
-
+  grades = {
+    "A" => 90..100,
+    "B" => 80..89,
+    "C" => 70..79,
+    "D" => 60..69,
+    "F" => 0..59
+  }
+  
+  grades.each do |k,v|
+    if v === integer
+      return k
+    end
+  end
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  array.min_by { |x| x.length }
 end
  
 
