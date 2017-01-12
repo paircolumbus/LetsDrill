@@ -1,13 +1,21 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
+
+	#Put your code here!
+	case integer	
+		when 90..100 then grade = "A"
+		when 80..90 then grade = "B"
+		when 70..80 then grade = "C"
+		when 60..70 then grade = "D"
+		else grade = "E"
+	end
+
+	return grade
 
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+	#Put your code here!
+	array.min_by(&:length)
 end
  
 
