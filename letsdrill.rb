@@ -14,8 +14,9 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-array.sort_by { |element| element.length }.first
+array.sort_by { |x| x.length }.first
   end
+end
 
 
 
