@@ -14,10 +14,8 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-  array.inject do |memo, arrayElement|
-    memo.length < arrayElement.length ? memo : arrayElement
+array.sort_by { |element| element.length }.first
   end
-end
 
 
 
@@ -30,4 +28,4 @@ p
 p "Shortest String: You should have 3 trues"
 p shortest_string(["touch","this", "car"]) == "car"
 p shortest_string([]) == nil
-p shortest_string(["can", "a", "solve", "Find", "solution"]) == "a" 
+p shortest_string(["can", "a", "solve", "Find", "solution"]) == "a"
