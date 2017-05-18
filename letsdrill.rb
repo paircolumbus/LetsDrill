@@ -1,15 +1,13 @@
-def get_letter_grade(integer)
- 
-  #Put your code here!
+GRADES = %w( F F F F F F D C B A )
 
+def get_letter_grade(integer)
+  GRADES[integer / 10]
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  array.min_by(&:length)
 end
- 
+
 
 
 ### Don't touch anything below this line ###
