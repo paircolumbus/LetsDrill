@@ -1,16 +1,17 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
+	return 'A' if integer >= 90
+	return 'B' if integer >= 80
+	return 'C' if integer >= 70
+	return 'D' if integer >= 60
+	'F'
 
+	# Less readable, more fun
+	# (([90, 80, 70, 60].find_index { | x | integer >= x } || 5) + 65).chr
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+	array.min_by { |x| x.length }
 end
- 
-
 
 ### Don't touch anything below this line ###
  
