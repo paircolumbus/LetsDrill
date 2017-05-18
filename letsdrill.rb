@@ -1,13 +1,20 @@
-def get_letter_grade(integer)
- 
-  #Put your code here!
+def get_letter_grade(grade)
 
+    return "F" if grade < 60
+
+    return "D" if grade < 70
+
+    return "C" if grade < 80
+
+    return "B" if grade < 90
+
+    return "A"
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+    return array.reduce do |shortest, current|
+        current.length > shortest.length ? shortest : current
+    end
 end
  
 
