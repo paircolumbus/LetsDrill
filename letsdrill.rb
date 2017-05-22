@@ -1,12 +1,34 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
+
+    if integer < 60
+        return "F"
+    elsif integer < 70
+        return "D"
+    elsif integer < 80
+        return "C"
+    elsif integer < 90
+        return "B"
+    else
+        return "A"
+    end
 
 end
 
 def shortest_string(array)
 
-  #Put your code here!
+    if array.length == 0
+
+        return nil
+
+    else
+
+        lengths = array.map {|item| item.length}
+        shortest_length_position = lengths.each_with_index.min[1]
+        shortest_length_string = array[shortest_length_position]
+
+        return shortest_length_string
+
+    end
 
 end
  
