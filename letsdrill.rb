@@ -10,9 +10,7 @@ def get_letter_grade(number_grade)
 end
 
 def shortest_string(words)
-  unless words.length == 0
-    words.min_by &:length
-  end
+  words.min_by &:length
 end
 
 ### Don't touch anything below this line ###
