@@ -1,13 +1,16 @@
-def get_letter_grade(integer)
- 
-  #Put your code here!
-
+def get_letter_grade(num)
+    case num 
+    when 90..100 then return "A"
+    when 80..89 then return "B"
+    when 70..79 then return "C"
+    when 60..69 then return "D"
+    when 0..59 then return "D"
+    end
 end
 
-def shortest_string(array)
-
-  #Put your code here!
-
+def shortest_string(test_array)
+  result = test_array.sort_by {|x| x.length}
+  return result[0]
 end
  
 
@@ -21,4 +24,4 @@ p
 p "Shortest String: You should have 3 trues"
 p shortest_string(["touch","this", "car"]) == "car"
 p shortest_string([]) == nil 
-p shortest_string(["can", "a", "solve", "Find", "solution"]) == "a" 
+
