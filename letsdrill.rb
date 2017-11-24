@@ -1,12 +1,19 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
+
+    return nil if integer.nil?
+
+    return "A" if integer >= 90
+    return "B" if integer >= 80
+    return "C" if integer >= 70
+    return "D" if integer >= 60
+    return "F"
 
 end
 
 def shortest_string(array)
 
-  #Put your code here!
+    array.each { |a| return nil unless a.is_a? String }
+    return array.min { |a, b| a.length <=> b.length }
 
 end
  
