@@ -1,12 +1,24 @@
 def get_letter_grade(integer)
  
-  #Put your code here!
+  case integer
+  when 90..100
+  	"A"
+  when 80..98
+  	"B"
+  when 70..79
+  	"C"
+  when 60..69
+  	"D"
+  else
+  	"F"
+  end
+  		
 
 end
 
 def shortest_string(array)
 
-  #Put your code here!
+  array.min{|a,b| a.size <=> b.size }
 
 end
  
@@ -16,7 +28,7 @@ end
  
 p "Fetch Letter Grade: You should have 2 trues"
 p get_letter_grade(89) == "B" 
-p get_letter_grade(73) == "C" 
+p get_letter_grade(73) == "C"
 p
 p "Shortest String: You should have 3 trues"
 p shortest_string(["touch","this", "car"]) == "car"
