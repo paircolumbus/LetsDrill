@@ -1,13 +1,28 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
-
+  case integer/10
+  when 10
+    "A"
+ 	when 9
+  	"A"
+ 	when 8
+ 		"B"
+ 	when 7
+ 		"C"
+ 	when 6
+ 		"D"
+ 	else
+ 		"F"
+ 	end
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  shortest = nil
+  array.each do |word|
+    if shortest.nil? or shortest.length > word.length
+      shortest = word
+    end
+  end
+  shortest
 end
  
 
