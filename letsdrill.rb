@@ -16,8 +16,7 @@ end
 
 def shortest_string(array)
 
-  sorted = array.sort { | x, y | x.length <=> y.length }
-  sorted[0]
+  array.min_by { |a| a.length }
 
 end
  
