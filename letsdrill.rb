@@ -1,29 +1,19 @@
 def get_letter_grade(integer)
   if integer > 89
-    letter_grade = "A"
+    "A"
   elsif integer > 79
-    letter_grade = "B"
+    "B"
   elsif integer > 69
-    letter_grade = "C"
+    "C"
   elsif integer > 59
-    letter_grade = "D"
+    "D"
   else
-    letter_grade = "F"
+    "F"
   end
-
-  letter_grade
 end
 
 def shortest_string(array)
-  shortest = array.first
-
-  array.each do |string|
-    if string.length < shortest.length
-      shortest = string
-    end
-  end
-
-  shortest
+  array.min_by { |string| string.length }
 end
 
 
