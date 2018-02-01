@@ -17,8 +17,25 @@ end
 
 def shortest_string(array)
 
-  #Put your code here!
+  #Make sure the input is an array and not empty
+  if array.empty? or not array.is_a? Array
+    print "Illegal input, must provide a non empty array\n"
+    return
+  end
 
+  shortest = nil
+  #Make sure the array only contains Strings
+  array.each do |x|
+    if not x.is_a? String
+      print "Array must only contain Strings\n"
+      return
+    end
+      
+    if shortest.nil? or x.size < shortest.size
+        shortest = x
+    end
+  end
+  return shortest
 end
  
 
