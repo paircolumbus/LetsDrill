@@ -30,7 +30,8 @@ def shortest_string(array)
       print "Array must only contain Strings\n"
       return
     end
-      
+    
+    #We have a String lets see if its shortest
     if shortest.nil? or x.size < shortest.size
         shortest = x
     end
