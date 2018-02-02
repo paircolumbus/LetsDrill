@@ -23,20 +23,15 @@ def shortest_string(array)
     return
   end
 
-  shortest = nil
-  #Make sure the array only contains Strings
-  array.each do |x|
-    if not x.is_a? String
-      print "Array must only contain Strings\n"
-      return
-    end
-    
-    #We have a String lets see if its shortest
-    if shortest.nil? or x.size < shortest.size
-        shortest = x
-    end
+  #Make sure the array only contains strings
+  if not array.all? {|x| x.is_a? String}
+    print "Array must only contain strings\n"
+    return
   end
-  return shortest
+
+  #Sort the array and return the first element
+  sorted = array.sort { |x,y| x.size<=>y.size }
+  return sorted[0]
 end
  
 
