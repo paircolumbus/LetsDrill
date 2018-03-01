@@ -1,16 +1,26 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
-
+  case integer
+  when -Float::INFINITY...0
+    raise ArgumentError.new("score must be a positive number")
+  when 0..59
+    "F"
+  when 60..69
+    "D"
+  when 70..79
+    "C"
+  when 80..89
+    "B"
+  when 90..Float::INFINITY
+    "A"
+  end
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  unless array.nil?
+    array.min_by { |s| s.length }
+  end
 end
  
-
 
 ### Don't touch anything below this line ###
  
