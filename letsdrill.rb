@@ -1,13 +1,24 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
-
+  case integer
+  when 90..100
+    "A"
+  when 80..89
+    "B"
+  when 70..79
+    "C"
+  when 60..69
+    "D"
+  when 0..59
+    "F"
+  else
+    "Error: invalid input, \"#{integer}\" Grades must be between 0 and 100."
+  end
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  if array.any?
+    array.sort_by{|s| s.length}[0]
+  end
 end
  
 
