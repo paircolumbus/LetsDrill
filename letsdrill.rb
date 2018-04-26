@@ -1,12 +1,12 @@
 def get_letter_grade(integer)
   case integer
-  when 0 
+  when 0..59
     "F"
-  when 1..65
+  when 60..69
     "D"
-  when 66..75
+  when 70..79
     "C"
-  when 76..89
+  when 80..89
     "B"
   when 90..100
     "A"
