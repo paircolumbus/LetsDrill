@@ -1,13 +1,22 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
-
+  case integer
+  when 0 
+    "F"
+  when 1..65
+    "D"
+  when 66..75
+    "C"
+  when 76..89
+    "B"
+  when 90..100
+    "A"
+  else 
+    "Invalid grade score"
+  end
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  array.min_by { |x| x.length } 
 end
  
 
