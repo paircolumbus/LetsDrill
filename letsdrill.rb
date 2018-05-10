@@ -13,9 +13,7 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  array.sort_by {|word| word.length}.first
 end
 
 
