@@ -1,31 +1,20 @@
 def get_letter_grade(integer)
-  if integer >= 90
+  case integer
+  when 90..100
     'A'
-  elsif integer < 90 && integer >= 80
+  when 80..90
     'B'
-  elsif integer < 80 && integer >= 70
+  when 70..80
     'C'
-  elsif integer < 70 && integer >= 60
+  when 60..70
     'D'
-  elsif integer < 60
+  else
     'F'
   end
 end
 
 def shortest_string(array)
-  if array.empty?
-    nil
-  else
-    shortest_length = array[0].length
-    shortest_word = array[0]
-    array.each do |word|
-      if word.length < shortest_length
-        shortest_length = word.length
-        shortest_word = word
-      end
-    end
-    shortest_word
-  end
+  array.min_by(&:length)
 end
 
 
