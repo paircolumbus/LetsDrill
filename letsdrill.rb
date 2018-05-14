@@ -15,7 +15,7 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
- return array.sort_by{|s| s.length }[0]
+ array.sort_by{|s| s.length }[0]
 end
  
 
