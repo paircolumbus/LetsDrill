@@ -1,12 +1,25 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
+  grade = ''
+  case integer
+  when 90..100
+    grade = 'A'
+  when 75..89
+    grade = 'B'
+  when 65..74
+    grade = 'C'
+  when 50..64
+    grade = 'D'
+  else
+    grade = 'F'
+  end
 
+  return grade
 end
 
 def shortest_string(array)
-
-  #Put your code here!
+  sorted_array = array.sort_by { |word| word.length }
+  
+  return sorted_array[0]
 
 end
  
