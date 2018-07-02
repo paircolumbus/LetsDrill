@@ -1,7 +1,17 @@
 def get_letter_grade(integer)
-
-  #Put your code here!
-
+  letter_grade = ""
+  if integer >= 90
+    letter_grade = "A"
+  elsif integer >= 80
+    letter_grade = "B"
+  elsif integer >= 70
+    letter_grade = "C"
+  elsif integer >= 60
+    letter_grade = "D"
+  else
+    letter_grade = "F"
+  end
+  return letter_grade
 end
 
 def shortest_string(array)
