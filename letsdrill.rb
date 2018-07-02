@@ -15,9 +15,8 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
+  return the_shortest_string = array.min_by{|a| a.size}
 
-  #Put your code here!
-  #Initial Commit
 
 end
 
