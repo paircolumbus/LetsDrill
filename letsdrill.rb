@@ -1,20 +1,31 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
 
+  return "Invalid Input" unless /\A\d+\z/ =~ integer.to_s
+
+  case integer
+  when 91..100
+    "A"
+  when 81..90
+    "B"
+  when 71..80
+    "C"
+  when 61..70
+    "D"
+  when integer<60
+    "F"
+  end
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  array.min_by {|string| string.length}
 end
- 
+
 
 
 ### Don't touch anything below this line ###
- 
-p "Fetch Letter Grade: You should have 2 trues"
+
+p "Fetch Letter Grade: You should have 3 trues"
+p get_letter_grade("Not an integer") == "Invalid Input"
 p get_letter_grade(89) == "B" 
 p get_letter_grade(73) == "C" 
 p
