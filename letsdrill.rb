@@ -1,12 +1,23 @@
 def get_letter_grade(integer)
  
-  #Put your code here!
-
+  if (90..100).include?(integer)
+  	"A"
+  elsif (80..89).include?(integer)
+  	"B"
+  elsif (70..79).include?(integer)
+  	"C"
+  elsif (60..69).include?(integer)
+  	"D"
+  else 
+  	"F"
+  end
 end
 
 def shortest_string(array)
 
-  #Put your code here!
+  return nil if array.empty?
+
+  array.min_by(&:length)
 
 end
  
