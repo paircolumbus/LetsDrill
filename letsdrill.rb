@@ -1,13 +1,20 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
-
+  if integer >= 90
+    "A"
+  elsif integer >= 80 && integer < 90
+    "B"
+  elsif integer >= 70 && integer < 80
+    "C"
+  elsif integer >= 60 && integer < 70
+    "D"
+  else
+    "F"
+  end
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  sorted_arr = array.sort { |x, y| x.length <=> y.length }
+  sorted_arr[0]
 end
  
 
