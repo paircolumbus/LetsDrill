@@ -1,23 +1,22 @@
 def get_letter_grade(integer)
     case integer
-        when (0..59)
-             'F'
-        when (60..69)
-             'D'
-        when (70..79)
-             'C'
-        when (80..89)
-             'B'
-        else
-            'A'
-        end
- 
- 
+    when (0..59)
+      'F'
+    when (60..69)
+      'D'
+    when (70..79)
+      'C'
+    when (80..89)
+      'B'
+    else
+      'A'
+    end
+
 end
 
 def shortest_string(array)
 
-array.min_by {|x| x.length}
+array.min_by &:length
 
 end
  
