@@ -13,21 +13,18 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-  min_string = array.join
-  if min_string.length == 0
-    return nil
-  else
-    array.each do |str|
-      if str.length < min_string.length
-        min_string = str
-      end
-    end
-    return min_string
-  end
-
+  # Original Code - Updating to try min_by
+  # min_string = array.join
+  # if min_string.length.zero?
+  #   nil
+  # else
+  #   array.each do |str|
+  #     min_string = str if str.length < min_string.length
+  #   end
+  #   min_string
+  # end
+  array.min_by(&:length)
 end
-
-
 
 ### Don't touch anything below this line ###
 
