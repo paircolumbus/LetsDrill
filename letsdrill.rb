@@ -1,13 +1,33 @@
 def get_letter_grade(integer)
  
-  #Put your code here!
+### Using some ternaries (ternarys? ternararies?)
+
+  integer >= 90 ? "A" :
+    integer >= 80 ? "B" :
+    integer >= 70 ? "C" :
+    integer >= 60 ? "D" :
+    "F"
 
 end
 
 def shortest_string(array)
 
-  #Put your code here!
-
+  # First guess that the first array
+  # element is the shortest.
+  shortest = array[0]
+    
+  # Iterate through each string in the array
+  array.each {|string|
+  # If the string we're looking at is shorter than
+  # the shortest we've seen so far...
+      if string.length < shortest.length
+          # ...set the shortest string to this
+          # current string.
+          shortest = string
+      end
+      }
+  # Implicit return! Because we can!
+  shortest
 end
  
 
