@@ -15,7 +15,7 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-  # exclamation mark treats array as pointer (edits array at same time)
+  # exclamation mark edits array at same time
   array.sort_by!(&:length)
   if array.length > 0
     return array[0]
