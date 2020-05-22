@@ -1,13 +1,19 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
-
+  if integer > 89
+    'A'
+  elsif integer > 79
+    'B'
+  elsif integer > 69
+    'C'
+  elsif integer > 59
+    'D'
+  else
+    'F'
+  end
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  array.min_by(&:length)
 end
  
 
