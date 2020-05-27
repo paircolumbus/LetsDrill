@@ -23,7 +23,7 @@ def shortest_string(array)
   shortest = array[0]
 
   array.each { |item|
-    if item.length < shortest.length then
+    if item.length < shortest.length
       shortest = item
     end
   }
