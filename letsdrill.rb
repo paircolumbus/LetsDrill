@@ -22,11 +22,11 @@ def shortest_string(array)
 
   shortest = array[0]
 
-  array.each { |item|
+  array.each do |item|
     if item.length < shortest.length
       shortest = item
     end
-  }
+  end
 
   return shortest
 end
