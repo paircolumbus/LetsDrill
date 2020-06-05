@@ -1,13 +1,27 @@
 def get_letter_grade(integer)
- 
-  #Put your code here!
 
+  case integer
+  when 0..59
+    'F'
+  when 60..69
+    'D'
+  when 70..79
+    'C'
+  when 80..89
+    'B'
+  when 90..100
+    'A'
+  else
+    'Invalid number entered'
+  end
 end
 
 def shortest_string(array)
-
-  #Put your code here!
-
+  if array.length > 0
+    lengths = array.map{|word| word.length}
+    min_index = lengths.index(lengths.min)
+    array[min_index]
+  end
 end
  
 
