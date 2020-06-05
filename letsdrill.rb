@@ -17,11 +17,7 @@ def get_letter_grade(integer)
 end
 
 def shortest_string(array)
-  if array.length > 0
-    lengths = array.map{|word| word.length}
-    min_index = lengths.index(lengths.min)
-    array[min_index]
-  end
+  array.min_by{|word| word.length}
 end
  
 
