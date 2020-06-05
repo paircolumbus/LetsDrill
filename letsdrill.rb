@@ -2,29 +2,22 @@ def get_letter_grade(integer)
  
   case integer
   when 0..59
-    p "F"
+    return "F"
   when 60..69
-    p "D"
+    return "D"
   when 70..79
-    p "C"
+    return "C"
   when 80..89
-    p "B"
+    return "B"
   when 90..100
-    p "A"
-  begin
-    p "Error"
-  rescue => exception
-    
-  else
-    
-  end
+    return "A"
   end
 
 end
 
 def shortest_string(array)
 
-  p array.min_by{|val| val.length}
+  return array.min_by{|val| val.length}
 
 end
  
