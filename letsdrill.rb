@@ -2,22 +2,22 @@ def get_letter_grade(integer)
  
   case integer
   when 0..59
-    return "F"
+    "F"
   when 60..69
-    return "D"
+    "D"
   when 70..79
-    return "C"
+    "C"
   when 80..89
-    return "B"
+    "B"
   when 90..100
-    return "A"
+    "A"
   end
 
 end
 
 def shortest_string(array)
 
-  return array.min_by{|val| val.length}
+  array.min_by{|val| val.length}
 
 end
  
