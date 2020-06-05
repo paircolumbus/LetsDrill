@@ -1,12 +1,30 @@
 def get_letter_grade(integer)
  
-  #Put your code here!
+  case integer
+  when 0..59
+    p "F"
+  when 60..69
+    p "D"
+  when 70..79
+    p "C"
+  when 80..89
+    p "B"
+  when 90..100
+    p "A"
+  begin
+    p "Error"
+  rescue => exception
+    
+  else
+    
+  end
+  end
 
 end
 
 def shortest_string(array)
 
-  #Put your code here!
+  p array.min_by{|val| val.length}
 
 end
  
