@@ -15,7 +15,7 @@ end
 
 def shortest_string(array)
 
-  #Put your code here!
+  array.min_by { |word| word.length }
 
 end
  
